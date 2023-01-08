@@ -1,4 +1,5 @@
 ﻿using AnnalynsAttack;
+using Batch;
 using static AnnalynsAttack.LogLine;
 
 public class Program
@@ -60,9 +61,11 @@ public class Program
         //Console.WriteLine(log.Message());
         //Console.WriteLine(log.LogLevel());
 
-        Console.WriteLine(LogLine.ParseLogLevel("[INF]: File deleted"));
-        Console.WriteLine(LogLine.ParseLogLevel("[XYZ]: Overly specific, out of context message"));
-        Console.WriteLine(LogLine.OutputForShortLog(LogLevel.Error, "Stack overflow"));
+        //Console.WriteLine(LogLine.ParseLogLevel("[INF]: File deleted"));
+        //Console.WriteLine(LogLine.ParseLogLevel("[XYZ]: Overly specific, out of context message"));
+        //Console.WriteLine(LogLine.OutputForShortLog(LogLevel.Error, "Stack overflow"));
+
+        SimpleCalculator.Calculate(1, 2, "**");
     }
 }
 
