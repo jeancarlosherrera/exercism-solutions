@@ -1,5 +1,6 @@
 ﻿using AnnalynsAttack;
 using Batch;
+using Microsoft.VisualBasic;
 using static AnnalynsAttack.LogLine;
 
 public class Program
@@ -65,7 +66,11 @@ public class Program
         //Console.WriteLine(LogLine.ParseLogLevel("[XYZ]: Overly specific, out of context message"));
         //Console.WriteLine(LogLine.OutputForShortLog(LogLevel.Error, "Stack overflow"));
 
-        SimpleCalculator.Calculate(1, 2, "**");
+        var wm = new WeighingMachine(precision: 3);
+        wm.Weight = 60.567;
+        wm.TareAdjustment = 10;
+        Console.WriteLine($"{ wm.Precision} {wm.Weight}");
+        Console.WriteLine(wm.DisplayWeight);
     }
 }
 
